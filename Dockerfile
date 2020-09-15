@@ -3,7 +3,7 @@ FROM python:3.7.1
 ENV PYTHONUNBUFFERED 1
 RUN apt-get update && apt-get install apt-transport-https vim -y && apt-get clean
 RUN apt-get install supervisor -y
-COPY worker.conf /etc/supervisor/conf.d
+#COPY worker.conf /etc/supervisor/conf.d
 
 #Running Cron
 RUN apt-get update && apt-get install -y cron
